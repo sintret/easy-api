@@ -22,8 +22,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('sintret:easy-api');
-  api.addFiles('easy-api-tests.js');
 
   api.use('http');
   api.use('peterellisjones:describe');
