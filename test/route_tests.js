@@ -2,7 +2,7 @@ if (Meteor.isServer) {
     describe('A route', function() {
         it('can be constructed with options', function(test) {
             var route;
-            route = new this.Route(new this.Restivus, 'test-route-1', {
+            route = new this.Route(new this.EasyApi, 'test-route-1', {
                 authRequired: true,
                 roleRequired: ['admin', 'dev']
             }, {
@@ -18,7 +18,7 @@ if (Meteor.isServer) {
         });
         it('can be constructed without options', function(test) {
             var route;
-            route = new this.Route(new this.Restivus, 'test-route-2', {
+            route = new this.Route(new this.EasyApi, 'test-route-2', {
                 get: function() {
                     return 'GET test-route-2';
                 }
@@ -28,7 +28,7 @@ if (Meteor.isServer) {
         });
         it('should support endpoints for all HTTP methods', function(test) {
             var route;
-            route = new this.Route(new this.Restivus, 'test-route-3', {
+            route = new this.Route(new this.EasyApi, 'test-route-3', {
                 get: function() {
                     return 'GET test-route-2';
                 },
@@ -57,10 +57,10 @@ if (Meteor.isServer) {
         });
         return context('that\'s initialized without options', function() {
             return it('should have the default configuration', function(test) {
-                test.equal(Restivus.config.apiPath, 'api/');
-                test.isFalse(Restivus.config.useAuth);
-                test.isFalse(Restivus.config.prettyJson);
-                return test.equal(Restivus.config.auth.token, 'services.resume.loginTokens.hashedToken');
+                test.equal(EasyApi.config.apiPath, 'api/');
+                test.isFalse(EasyApi.config.useAuth);
+                test.isFalse(EasyApi.config.prettyJson);
+                return test.equal(EasyApi.config.auth.token, 'services.resume.loginTokens.hashedToken');
             });
         });
     });

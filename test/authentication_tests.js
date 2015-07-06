@@ -83,7 +83,7 @@ Meteor.startup(function() {
         });
         it('should remove the logout token after logging out and should respond after 500 msec', function(test, next) {
             var startTime;
-            Restivus.addRoute('prevent-access-after-logout', {
+            EasyApi.addRoute('prevent-access-after-logout', {
                 authRequired: true
             }, {
                 get: function() {
