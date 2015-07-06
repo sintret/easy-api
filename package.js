@@ -14,7 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
 
   //package files
-  api.addFiles('lib/restivus.js', 'server');
+  api.addFiles('lib/easyapi.js', 'server');
   api.addFiles('lib/route.js', 'server');
   api.addFiles('lib/auth.js', 'server');
 
