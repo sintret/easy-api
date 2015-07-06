@@ -18,6 +18,9 @@ Package.onUse(function(api) {
   api.addFiles('lib/route.js', 'server');
   api.addFiles('lib/auth.js', 'server');
 
+  // Exports
+  api.export('EasyApi', 'server');
+
 });
 
 Package.onTest(function(api) {
